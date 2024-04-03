@@ -135,7 +135,7 @@ data class MyDate (
     //create duplicate future dates with a starting date
     fun listToDates(lst: List<Int>, daily: Boolean, week: Int): List<Int> {
         val cal = Calendar.getInstance()
-        cal.add(cal.get(2), -cal.get(7) + 1) //start from sunday
+        cal.add(Calendar.DAY_OF_MONTH, -cal.get(7) + 1) //start from sunday
         val tmp = ArrayList<Int>()
         for (x in 0 until 7 * week) {
             if (daily) {
@@ -151,7 +151,7 @@ data class MyDate (
                     tmp.add(1)
                 }
             }
-            cal.add(cal.get(2), 1)
+            cal.add(Calendar.DAY_OF_MONTH, 1)
         }
         return tmp
     }

@@ -47,7 +47,8 @@ class DWHabitViewModel(
                             habit -> val x = habit.displayDate
                                 //for (x in 0 until habit.dates.size step 4) {
 //                                    Log.d("nmber", "$habit.dates.size")
-//                                    Log.d("nmber", "$x")
+                                    Log.d("nmber", "${habit.dates}")
+
                                     if (habit.dates[x] == event.day &&
                                         habit.dates[x + 1] == event.month &&
                                         habit.dates[x + 2] == event.year &&

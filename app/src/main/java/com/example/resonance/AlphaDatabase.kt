@@ -8,7 +8,7 @@ import androidx.room.TypeConverters
 
 @Database(
     entities = [Habit::class, Tag::class],
-    version = 25
+    version = 2
 )
 @TypeConverters(Converters::class)
 abstract class AlphaDatabase : RoomDatabase() {

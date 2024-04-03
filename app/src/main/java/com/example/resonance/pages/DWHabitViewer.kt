@@ -79,7 +79,7 @@ class DWHabitViewer{
             }
 
             val cal = Calendar.getInstance()
-            cal.add(cal.get(2), -1)
+            cal.add(Calendar.DAY_OF_MONTH, -1)
             onEvent(DayHabitEvent.GetHabits(cal.get(5), cal.get(2), cal.get(1)))
             onEvent(DayHabitEvent.DayHasEnded(state.habits))
             Log.d("restart", "True")

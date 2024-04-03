@@ -1,6 +1,7 @@
 package com.example.resonance.components
 
 import android.icu.util.Calendar
+import android.util.Log
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -157,23 +158,19 @@ class DateUi {
         val cal = Calendar.getInstance()
         val dateList = ArrayList<MyDate>()
         // start to add back from 1 week earlier
-        cal.add(cal.get(2), -7)
+        cal.add(Calendar.DAY_OF_MONTH,  -7)
 
         // another calender to crosscheck
         val crCal = Calendar.getInstance()
         val curDate = MyDate(crCal.get(5), crCal.get(2), crCal.get(1), crCal.get(7))
 
 
+
         for (i in 0..14) {
-            cal.add(cal.get(2), 1)
-            dateList.add(MyDate(cal.get(5), cal.get(2), cal.get(1),
-//                if (cal.get(5) == crCal.get(5)) 8
-//                else if (cal.get(5) + 1 == crCal.get(5)) 10
-//                else if (cal.get(5) - 1 == crCal.get(5)) 9
-//                else
-                    cal.get(7)
-            ))
+            cal.add(Calendar.DAY_OF_MONTH, 1)
+            dateList.add(MyDate(cal.get(5), cal.get(2), cal.get(1), cal.get(7)))
         }
+
         // for week view
         val secCal = Calendar.getInstance()
         val weekDateList = ArrayList<com.example.resonance.Pair>()
