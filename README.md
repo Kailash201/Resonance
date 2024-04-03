@@ -1,5 +1,5 @@
 ## Android Application to Track Habits, Developed in Kotlin
-### still in development
+### Still in development
 
 ### Prototype, designed using Figma
 
