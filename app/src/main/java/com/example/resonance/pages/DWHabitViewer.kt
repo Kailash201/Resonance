@@ -108,14 +108,6 @@ class DWHabitViewer{
                 tab.dayWeekTab(navController, 0)
                 if (!MainState.hh.value) {
                     Spacer(modifier = Modifier.height(40.dp))
-                    Button(onClick = {
-                        //    re = re.addDays(7)
-                        //    state.restart.value = true
-                        restart.value = true
-                        Log.d("restart1", "True")
-                    }) {
-                        Text("Next 7 days")
-                    }
                     Spacer(modifier = Modifier.height(40.dp))
                     dS.dateScroller(0, navController, 6, state, onEvent)
                     Spacer(modifier = Modifier.height(40.dp))
